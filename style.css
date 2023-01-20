@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+:root{
+    --main-color: #FF9400;
+    --second-color: #737171;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: clamp(16px, 1.5vw, 24px);
+}
+
+body{
+    font-size: 1rem;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+.global-padding{
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+header{
+    display: flex;
+    background-color: aquamarine;
+}
+
+nav{
+    background-color: red;
+    width: 100%;
+
+}
