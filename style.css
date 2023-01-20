@@ -31,6 +31,10 @@ a{
     text-decoration: none;
 }
 
+header{
+  
+}
+
 nav{
     display: flex;
     width: 100%;
@@ -70,6 +74,7 @@ nav a:hover{
 #contact .icon {
     display: none;
 } 
+
 #burger {
     display: none;
     position: absolute;
@@ -91,17 +96,7 @@ nav a:hover{
 
 }
 
-.openNav .center-nav{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    top: 6rem;
-    position: absolute;
-    justify-content: center;
-    background-color: #737171;
-    left: 0;
-    width: 100%;
-}
+
 
 
 @media screen and (max-width: 700px) {
@@ -122,6 +117,17 @@ nav a:hover{
     .center-nav {
         display: none;
    } 
+   .openNav .center-nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: var(--navHeight);
+    position: absolute;
+    justify-content: center;
+    background-color: #737171;
+    left: 0;
+    width: 100%;
+    }
  
     
 }
