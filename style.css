@@ -36,6 +36,7 @@ nav{
     width: 100%;
     align-items: center;
     justify-content: space-between;
+
 }
 
 .center-nav{
@@ -71,6 +72,9 @@ nav a:hover{
 } 
 #burger {
     display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 } 
 
 .icon-burger{
@@ -87,6 +91,18 @@ nav a:hover{
 
 }
 
+.openNav .center-nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 6rem;
+    position: absolute;
+    justify-content: center;
+    background-color: #737171;
+    left: 0;
+    width: 100%;
+}
+
 
 @media screen and (max-width: 700px) {
     #contact .txt {
@@ -101,9 +117,11 @@ nav a:hover{
 @media screen and (max-width: 540px) {
     #burger {
         display: block;
+
     }
     .center-nav {
         display: none;
    } 
+ 
     
 }
