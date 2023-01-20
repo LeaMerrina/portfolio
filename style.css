@@ -31,16 +31,11 @@ a{
     text-decoration: none;
 }
 
-header{
-    display: flex;
-}
-
 nav{
     display: flex;
     width: 100%;
     align-items: center;
-    justify-content: space-around;
-    
+    justify-content: space-between;
 }
 
 .center-nav{
@@ -58,8 +53,57 @@ nav a {
     color: #000;
     font-weight: 300;
     font-size: 0.80rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 nav a:hover{
     color: red;
+}
+
+.icon {
+    height: 1.23rem;
+    width: auto;
+} 
+
+#contact .icon {
+    display: none;
+} 
+#burger {
+    display: none;
+} 
+
+.icon-burger{
+    width: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.line{
+    height: 1.2px;
+    background-color: #000;
+    width: 100%;
+
+}
+
+
+@media screen and (max-width: 700px) {
+    #contact .txt {
+        display: none;
+    }
+    #contact .icon {
+        display: block;
+   } 
+    
+}
+
+@media screen and (max-width: 540px) {
+    #burger {
+        display: block;
+    }
+    .center-nav {
+        display: none;
+   } 
+    
 }
