@@ -23,17 +23,43 @@ body{
 }
 
 .global-padding{
-    padding-left: 10vw;
-    padding-right: 10vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+a{
+    text-decoration: none;
 }
 
 header{
     display: flex;
-    background-color: aquamarine;
 }
 
 nav{
-    background-color: red;
+    display: flex;
     width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    
+}
 
+.center-nav{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.logo{
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    color: red;
+}
+
+nav a {
+    color: #000;
+    font-weight: 300;
+    font-size: 0.80rem;
+}
+
+nav a:hover{
+    color: red;
 }
