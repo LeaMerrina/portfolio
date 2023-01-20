@@ -31,10 +31,6 @@ a{
     text-decoration: none;
 }
 
-header{
-  
-}
-
 nav{
     display: flex;
     width: 100%;
@@ -93,7 +89,6 @@ nav a:hover{
     height: 1.2px;
     background-color: #000;
     width: 100%;
-
 }
 
 
@@ -106,13 +101,11 @@ nav a:hover{
     #contact .icon {
         display: block;
    } 
-    
 }
 
 @media screen and (max-width: 540px) {
     #burger {
         display: block;
-
     }
     .center-nav {
         display: none;
@@ -124,10 +117,8 @@ nav a:hover{
     top: var(--navHeight);
     position: absolute;
     justify-content: center;
-    background-color: #737171;
+    background-color: rgba(115, 113, 113, 0.8);
     left: 0;
     width: 100%;
     }
- 
-    
 }
