@@ -121,16 +121,22 @@ h1{
     font-size: 3rem;
 }
 
-section{
+.flex-center{
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .titre{
-    width: 50%;
+    width: 100%;
+    max-width: 40rem;
     display: flex;
     margin-right: 3rem;
+    height: calc(100vh - var(--navHeight));
+
+}
+
+#title div{
+    background-color: #FF9400;
 }
 
 .bloc-img{
@@ -139,7 +145,9 @@ section{
     display: flex;
     padding-left: 3rem;
     overflow: hidden;
-
+    position: absolute;
+    left: 50%;
+    top: var(--navHeight)
 }
 
 .image-container{
@@ -174,7 +182,6 @@ section{
 @media screen and (max-width: 875px) {
     section{
         flex-direction: column;
-        text-align: center;
     }
     .titre, .bloc-img{
         width: 100%;
@@ -235,5 +242,8 @@ section{
     }
     .bloc-img{
         display: none;
+    }
+    .titre{
+        padding-left: 3rem;
     }
 }
