@@ -15,10 +15,11 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   const text = document.getElementById("title");
+  const jsPadding = Math.round(window.innerWidth / 48);
   const splitText = acAnimated.Plugins.SplitText(text, {
     words: 1,
     chars: 1,
-    spacing: 40,
+    spacing: jsPadding,
   });
 
   const colorText = () => {

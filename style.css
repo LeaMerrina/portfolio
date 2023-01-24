@@ -5,6 +5,7 @@
 :root{
     --main-color: #FF9400;
     --second-color: #737171;
+    --global-marge: 5vw;
 }
 
 body, html {
@@ -23,8 +24,8 @@ body{
 }
 
 .global-padding{
-    padding-left: 5vw;
-    padding-right: 5vw;
+    padding-left: var(--global-marge);
+    padding-right: var(--global-marge);
 }
 
 a{
@@ -121,9 +122,10 @@ h1{
     font-size: 3rem;
 }
 
-.flex-center{
+.hero{
     display: flex;
     align-items: center;
+    min-height: calc(100vh - var(--navHeight));
 }
 
 .titre{
@@ -131,12 +133,13 @@ h1{
     max-width: 40rem;
     display: flex;
     margin-right: 3rem;
-    height: calc(100vh - var(--navHeight));
-
+    z-index: 2;
+    position: relative;
 }
 
 #title div{
-    background-color: #FF9400;
+    background-color: white;
+
 }
 
 .bloc-img{
@@ -152,11 +155,14 @@ h1{
 
 .image-container{
     position: relative;
+    width: 100%;
+    padding-right: var(--global-marge);
 }
 
 .image-container img{
-    width: auto;
+    width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 .bgc-img{
@@ -180,19 +186,11 @@ h1{
 }
 
 @media screen and (max-width: 875px) {
-    section{
-        flex-direction: column;
-    }
-    .titre, .bloc-img{
-        width: 100%;
-        justify-content: center;
-    }
+   
     .title{
         padding: 0 4rem 0 4rem;
     }
-    .bloc-img{
-        height: 50vh;
-    }
+    
     .bgc-img{
         display: none;
     }
@@ -240,10 +238,15 @@ h1{
         transform: rotate(45deg);
         transition: all 0.4s linear;
     }
+    .hero{
+        height: 50vh;
+        min-height: auto;
+    }
     .bloc-img{
-        display: none;
+        height: 80%;
     }
-    .titre{
-        padding-left: 3rem;
+    h1{
+        font-size: 2rem;
     }
+
 }
