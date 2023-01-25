@@ -14,6 +14,11 @@ document.addEventListener("DOMContentLoaded", function () {
     SeeMore();
   };
 
+  document.getElementById('show-more').onclick = function(e) {
+    e.currentTarget.parentNode.classList.toggle('openExplication');
+    console.log('ok',e.currentTarget.parentNode);
+  }
+
   const text = document.getElementById("title");
   const jsPadding = Math.round(window.innerWidth / 48);
   const splitText = acAnimated.Plugins.SplitText(text, {
@@ -25,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const colorText = () => {
     var tl = gsap.timeline({ onComplete: colorText });
     for (var i = 0; i <= 5; i++) {
-      var char = splitText.chars[gsap.utils.random(0, 28, 1)];
+      var char = splitText.chars[gsap.utils.random(0, 27, 1)];
       tl.fromTo(char, 0.5, { color: "#ff0000" }, { color: "#000000" }, "-=0.4");
     }
 
