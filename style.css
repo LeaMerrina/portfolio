@@ -6,7 +6,7 @@
 }
 
 :root {
-  --bgc-color: rgb(187, 182, 182);
+  --bgc-color: rgb(223, 213, 213);
   --global-marge: 5vw;
   --main-color: #ff0000;
   --navHeight: 150px;
@@ -48,6 +48,9 @@ a {
   text-decoration: none;
   cursor: pointer;
   font-weight: 300;
+  font-size: 0.8rem;
+  padding-top: 1rem;
+  padding-bottom: 0.3rem;
 }
 
 a:hover {
@@ -254,6 +257,7 @@ picture{
   background-color: var(--bgc-color);
   position: relative;
 }
+
 
 .show-more:hover .bgc-color{
   background-color: var(--main-color);
