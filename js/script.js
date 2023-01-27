@@ -3,10 +3,10 @@ function SeeMore() {
 }
 
 function randomPositionCarre() {
-    let go = {onComplete: randomPositionCarre, ease: "power2.inOut"};
-    go.x= gsap.utils.random(-20, 450, 1)
-    go.y= gsap.utils.random(-20, 450, 1)
-    gsap.to('#carre', 2, go);
+  let go = { onComplete: randomPositionCarre, ease: "power2.inOut" };
+  go.x = gsap.utils.random(-20, 450, 1);
+  go.y = gsap.utils.random(-20, 450, 1);
+  gsap.to("#carre", 2, go);
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -14,10 +14,15 @@ document.addEventListener("DOMContentLoaded", function () {
     SeeMore();
   };
 
-  document.getElementById('show-more').onclick = function(e) {
-    e.currentTarget.parentNode.classList.toggle('openExplication');
-    console.log('ok',e.currentTarget.parentNode);
+  const showMoreList = document.getElementsByClassName("show-more")
+  for (let i = 0; i < showMoreList.length; i++) {
+    const element = showMoreList[i];
+    element.onclick = function (e) {
+      e.currentTarget.parentNode.classList.toggle("openExplication");
+      console.log("ok", e.currentTarget.parentNode);
+    };
   }
+  
 
   const text = document.getElementById("title");
   const jsPadding = Math.round(window.innerWidth / 48);
