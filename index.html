@@ -54,9 +54,12 @@
             <h1 id="title" class="font-titre">DEVELOPER FRONT-END<br>LÉA MERRINA</h1>
         </div>
         <div class="bloc-img">
-            <div class="image-container">
+            <div class="image-container fx-opacity" id="hero-img">
                 <div class="bgc-img" id="carre"></div>
-                <img src="image/home.jpg" alt="">
+                <picture>
+                    <source srcset="image/home-mobile.jpg" media="(max-width: 540px)" />
+                    <img src="image/home.jpg" alt="MDN" />
+                  </picture>
             </div>
         </div>
     </section>
@@ -65,33 +68,44 @@
         <div class="titre-projet">
             <h2 class="font-titre">Projets</h2>
         </div>
-        <div class="grid">
+        <div class="grid global-padding">
             <div class="project-size">
                 <div class="carre"><img class="g-img-contains" src="image/logo-codeacademy.png" alt=""></div>
-                <p>Nom du projet</p>
-                <a class="show-more">En savoir plus</a>
+                <h3>Le Marathon de Lyon</h3>
+                <a class="show-more">En savoir plus<div class="line bgc-color"></div></a>
                 <div class="explication">
-                    <p>Ce projet m'a été demandée dans le cadre de ma formation <a href="https://www.codecademy.com">Codeacademy. Il était question de créer un site en HTML et CSS, pour un évenènement sportif fictif. <br><a href=""></a></a></p>
+                    <p>Ce projet m'a été demandée dans le cadre de ma formation <a href="https://www.codecademy.com" target="_blank">Codeacademy.</a> Il était question de créer un site en HTML et CSS, pour un évenènement sportif fictif. <br><a href="projets/code-club/index.html" target="_blank">Le Marathon de Lyon</a></p>
                 </div>
             </div>
             <div class="project-size">
                 <div class="carre"><img class="g-img-contains" src="image/logo-codeacademy.png" alt=""></div>
-                <p>Nom du projet</p>
-                <a class="show-more">En savoir plus</a>
+                <h3>Nom du projet</h3>
+                <a class="show-more">En savoir plus<div class="line bgc-color"></div></a>
                 <div class="explication">
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, praesentium doloremque! Velit rem id aliquam, nam iste tempora sunt unde veniam ratione obcaecati repellendus quasi aperiam doloremque quas voluptates illo.</p>
                 </div>
             </div>
             <div class="project-size">
                 <div class="carre"><img class="g-img-contains" src="image/logo-codeacademy.png" alt=""></div>
-                <p>Nom du projet</p>
-                <a class="show-more">En savoir plus</a>
+                <h3>Nom du projet</h3>
+                <a class="show-more">En savoir plus<div class="line bgc-color"></div></a>
                 <div class="explication">
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, praesentium doloremque! Velit rem id aliquam.</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <footer class="global-padding">
+        <div class="left">
+            <a href="https://github.com/LeaMerrina">Profil GitHub <img src="image/github-icon.svg" alt=""></a>
+            <a href="www.linkedin.com/in/léa-merrina">Profil LinkedIn <img src="image/linkedIn_icon.svg" alt=""></a>
+            <a href="mailto:merrina.lea@gmail.com">merrina.lea@gmail.com <img src="image/email.svg" alt=""></a>    
+        </div>
+        <div class="right">
+            <p>Léa Merrina ©</p>
+        </div>
+    </footer>
     
 </body>
 </html>

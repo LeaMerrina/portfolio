@@ -22,6 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log("ok", e.currentTarget.parentNode);
     };
   }
+
+  document.getElementById('hero-img').classList.toggle("fx-opacity");
   
 
   const text = document.getElementById("title");
