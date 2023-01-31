@@ -8,13 +8,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Orbitron:wght@600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-    <script src="script.js" defer></script>
+    <script src="js/splittext.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="js/script.js"></script>
     <title>Léa Merrina</title>
 </head>
 <body>
     <header>
         <nav class="global-padding">
-            <a href="index.html" class="logo">Léa Merrina</a>
+            <a href="index.html" class="logo">L</a>
             <div class="center-nav">
                 <a href="#projets">Projets</a>
                 <a href="#competences">Compétences</a>
@@ -45,6 +48,43 @@
 
         </nav>
     </header>
+
+    <section class="global-padding hero">
+        <div class="presentation">
+            <p>Je suis Léa Merrina, développeuse front-end. <br>Anciennement technicienne lumière dans le spectacle vivant. J'ai pu acquérir une certaine sensibilité à l'ésthetique et aux couleurs.<br>Je me suis essayée au développement, et j'ai tellement aimé, que j'ai fini par en faire mon métier.</p>
+        </div>
+        <div class="bloc-img">
+            <div class="image-container">
+                <img src="image/temporary-picture.JPG" alt="" />
+            </div>
+        </div>
+    </section>
+
+    <section class="global-padding competences">
+        <div class="list">
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React JS</li>
+            </ul>
+        </div>
+        <div class="comp-titre">
+            <h3>Compétences</h3>
+        </div>
+    </section>
+
+    <footer class="global-padding">
+        <div class="left">
+            <a href="https://github.com/LeaMerrina" target="_blank">Profil GitHub <img src="image/github-icon.svg" alt=""></a>
+            <a href="www.linkedin.com/in/léa-merrina" target="_blank">Profil LinkedIn <img src="image/linkedIn_icon.svg" alt=""></a>
+            <a href="mailto:merrina.lea@gmail.com">merrina.lea@gmail.com <img src="image/email.svg" alt=""></a>    
+        </div>
+        <div class="right">
+            <p>Léa Merrina ©</p>
+        </div>
+    </footer>
+
     
 </body>
 </html>

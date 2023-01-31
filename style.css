@@ -312,6 +312,42 @@ footer{
   gap: 0.5rem;
 }
 
+.presentation{
+  width: 50%;
+  display: flex;
+  margin-right: 3rem;
+  z-index: 2;
+  position: relative;
+}
+
+.presentation p{
+  font-weight: 400;
+}
+
+.competences{
+  margin-top: var(--global-marge);
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--global-marge);
+}
+
+.comp-titre{
+  width: 50%;
+  text-align: center;
+}
+
+.list{
+  width: 50%;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+ul{
+  display: inline-block;
+  list-style-type: square;
+}
+
 @media screen and (max-width: 950px) {
   .titre {
     margin-right: 0;
