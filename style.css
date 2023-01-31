@@ -315,37 +315,70 @@ footer{
 .presentation{
   width: 50%;
   display: flex;
-  margin-right: 3rem;
   z-index: 2;
   position: relative;
+  height: auto;
+  flex-direction: column;
 }
 
 .presentation p{
   font-weight: 400;
 }
 
-.competences{
+#competences{
   margin-top: var(--global-marge);
   display: flex;
-  align-items: center;
   margin-bottom: var(--global-marge);
+  flex-direction: column;
 }
 
 .comp-titre{
-  width: 50%;
-  text-align: center;
+  width: 100%;
+}
+
+.grid-comp{
+  display: grid;
+  margin-top: 5vw;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+
 }
 
 .list{
-  width: 50%;
-  text-align: center;
-  font-size: 1rem;
-  font-weight: 300;
+padding: 1rem;
+text-align: center;
 }
 
-ul{
-  display: inline-block;
-  list-style-type: square;
+.list p{
+  font-weight: 400;
+}
+
+.page-about .hero{
+  --global-marge:10vw;
+}
+
+.page-about #competences{
+  --global-marge:10vw;
+}
+
+.html{
+  background-color: #000;
+  color: white;
+}
+
+.css{
+  background-color: rgb(239, 239, 239);
+  color: var(--main-color);
+}
+
+.react{
+  background-color: var(--bgc-color);
+}
+
+.js{
+  background-color: var(--main-color);
+  color: #fff;
 }
 
 @media screen and (max-width: 950px) {
@@ -355,6 +388,10 @@ ul{
 
   .bloc-img {
     padding-left: 0;
+  }
+
+  .grid-comp{
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -441,5 +478,9 @@ ul{
 
   :root{
     --navHeight : 104px
+  }
+
+  .grid-comp{
+    grid-template-columns: 1fr;
   }
 }
