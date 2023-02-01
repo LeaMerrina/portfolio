@@ -7,7 +7,8 @@
 
 :root {
   --bgc-color: rgb(223, 213, 213);
-  --global-marge: 5vw;
+  --global-marge: 10vw;
+  --global-marge-y: 5vw;
   --main-color: #ff0000;
   --navHeight: 150px;
 }
@@ -188,10 +189,7 @@ picture{
   overflow: hidden;
   position: absolute;
   left: 50%;
- 
 }
-
-
 
 .image-container {
   position: relative;
@@ -201,6 +199,7 @@ picture{
   transition: opacity 1s linear;
   opacity: 1;
 }
+
 .fx-opacity{
   opacity: 0;
 }
@@ -223,10 +222,10 @@ picture{
 
 #projets {
   display: flex;
-  margin-top: var(--global-marge);
+  margin-top: var(--global-marge-y);
   flex-direction: column;
   align-items: center;
-  margin-bottom: var(--global-marge);
+  margin-bottom: var(--global-marge-y);
 }
 
 .titre-projet {
@@ -237,13 +236,13 @@ picture{
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--global-marge);
+  gap: var(--global-marge-y);
   width: 100%;
   justify-content: center;
 }
 
 .project-size {
-  margin-top: var(--global-marge);
+  margin-top: var(--global-marge-y);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -326,9 +325,9 @@ footer{
 }
 
 #competences{
-  margin-top: var(--global-marge);
+  margin-top: var(--global-marge-y);
   display: flex;
-  margin-bottom: var(--global-marge);
+  margin-bottom: var(--global-marge-y);
   flex-direction: column;
 }
 
@@ -352,18 +351,6 @@ text-align: center;
 
 .list p{
   font-weight: 400;
-}
-
-.page-about .hero{
-  --global-marge:10vw;
-}
-
-.page-about #competences{
-  --global-marge:10vw;
-}
-
-.page-about footer{
-  --global-marge:10vw;
 }
 
 
@@ -461,7 +448,6 @@ text-align: center;
     height: 50vh;
   }
 
-
   h1 {
     font-size: 2rem;
   }
@@ -478,14 +464,23 @@ text-align: center;
   }
 
   .project-size{
-    margin-bottom: var(--global-marge);
+    margin-bottom: var(--global-marge-y);
   }
 
   :root{
-    --navHeight : 104px
+    --navHeight: 104px;
+    --global-marge: 5vw;
   }
 
   .grid-comp{
     grid-template-columns: 1fr;
+  }
+
+  #my-photo{
+    display: none;
+  }
+
+  .presentation{
+    width: 100%;
   }
 }

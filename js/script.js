@@ -23,8 +23,10 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   }
 
-  document.getElementById('hero-img').classList.toggle("fx-opacity");
-  
+  document.getElementsByClassName('image-container')[0].classList.toggle("fx-opacity");
+
+
+
 
   const text = document.getElementById("title");
   const jsPadding = Math.round(window.innerWidth / 48);
