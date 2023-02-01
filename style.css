@@ -362,6 +362,11 @@ text-align: center;
   --global-marge:10vw;
 }
 
+.page-about footer{
+  --global-marge:10vw;
+}
+
+
 .html{
   background-color: #000;
   color: white;
