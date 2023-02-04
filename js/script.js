@@ -9,10 +9,66 @@ function randomPositionCarre() {
   gsap.to("#carre", 2, go);
 }
 
+
+
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("burger").onclick = function () {
     SeeMore();
   };
+
+
+let windowsWidth = 0;
+let sliderIsDestroy = true;
+let slider = null;
+const sliderSettings = {
+  type: 'carousel',
+  startAt:1,
+  perView: 3,
+  breakpoints: {
+    800: {
+      perView: 2
+    },
+    500: {
+      perView: 1,
+      autoPlay:2000
+    }
+  }};
+
+function onResize() {
+
+  windowsWidth = window.innerWidth;
+  if(windowsWidth < 800){
+
+    if(sliderIsDestroy){
+      console.log("mounttttt");
+      slider = new Glide('.glide', sliderSettings);
+      slider.mount();
+      sliderIsDestroy = false;
+      document.getElementsByClassName('container-slider')[0].classList.toggle("is-not-mount");
+    }
+
+  }else{
+
+
+    if(sliderIsDestroy == false){
+      console.log("destroyyyyyyy");
+      slider.destroy();
+      sliderIsDestroy = true;
+      document.getElementsByClassName('container-slider')[0].classList.toggle("is-not-mount");
+    }
+
+
+  }
+
+}
+
+window.onresize = onResize;
+
+
+
+  onResize();
+
+
 
   const showMoreList = document.getElementsByClassName("show-more")
   for (let i = 0; i < showMoreList.length; i++) {

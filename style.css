@@ -233,13 +233,23 @@ picture{
   width: 100%;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--global-marge-y);
+
+.container-slider{
   width: 100%;
-  justify-content: center;
+  background-color: red;
 }
+
+.glide__slide{
+  background-color: green;
+  height: 30rem;
+  
+}
+
+.is-not-mount .glide__slide{
+  background-color: yellow;
+  width: 33.33% !important;
+}
+
 
 .project-size {
   margin-top: var(--global-marge-y);
@@ -452,10 +462,6 @@ text-align: center;
     font-size: 2rem;
   }
 
-  .grid{
-    grid-template-columns: 100%;
-    grid-template-rows: 3fr;
-  }
 
   .carre{
     width: 50%;
