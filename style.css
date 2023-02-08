@@ -236,18 +236,33 @@ picture{
 
 .container-slider{
   width: 100%;
-  background-color: red;
 }
 
 .glide__slide{
-  background-color: green;
   height: 30rem;
   
 }
 
 .is-not-mount .glide__slide{
-  background-color: yellow;
   width: 33.33% !important;
+}
+
+.is-not-mount .glide__bullets{
+  display: none;
+}
+
+.glide__bullet{
+  background-color: var(--bgc-color) !important;
+  height: 1rem !important;
+  width: 1rem !important;
+}
+
+.glide__bullet--active{
+  background-color: var(--main-color) !important;
+}
+
+.glide__track{
+  padding-bottom: 4rem;
 }
 
 

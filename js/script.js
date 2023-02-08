@@ -11,11 +11,27 @@ function randomPositionCarre() {
 
 
 
+
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("burger").onclick = function () {
     SeeMore();
   };
 
+  const bulletCount = document.querySelectorAll('.glide__slide').length;
+
+  function generateBullets() {
+    const bulletWrapper = document.getElementById('glide__bullets');
+
+    for (let i = 0; i < bulletCount; i++) {
+      const button = document.createElement('button');
+      button.className = 'glide__bullet';
+      button.setAttribute("data-glide-dir", '='+i);
+  
+      bulletWrapper.appendChild(button)
+    }
+  }
+  
+  generateBullets();
 
 let windowsWidth = 0;
 let sliderIsDestroy = true;
@@ -109,4 +125,6 @@ window.onresize = onResize;
     let tt = document.querySelector("header").offsetHeight + "px";
     document.documentElement.style.setProperty("--navHeight", tt);
   }, "1000");
+
+
 });
