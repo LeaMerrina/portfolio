@@ -56,7 +56,6 @@ function onResize() {
   if(windowsWidth < 800){
 
     if(sliderIsDestroy){
-      console.log("mounttttt");
       slider = new Glide('.glide', sliderSettings);
       slider.mount();
       sliderIsDestroy = false;
@@ -67,7 +66,6 @@ function onResize() {
 
 
     if(sliderIsDestroy == false){
-      console.log("destroyyyyyyy");
       slider.destroy();
       sliderIsDestroy = true;
       document.getElementsByClassName('container-slider')[0].classList.toggle("is-not-mount");
@@ -91,7 +89,6 @@ window.onresize = onResize;
     const element = showMoreList[i];
     element.onclick = function (e) {
       e.currentTarget.parentNode.classList.toggle("openExplication");
-      console.log("ok", e.currentTarget.parentNode);
     };
   }
 
