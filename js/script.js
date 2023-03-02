@@ -1,6 +1,3 @@
-function SeeMore() {
-  document.querySelector("header").classList.toggle("openNav");
-}
 
 function randomPositionCarre() {
   let go = { onComplete: randomPositionCarre, ease: "power2.inOut" };
@@ -13,9 +10,6 @@ function randomPositionCarre() {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("burger").onclick = function () {
-    SeeMore();
-  };
 
   const bulletCount = document.querySelectorAll('.glide__slide').length;
 
@@ -92,7 +86,6 @@ window.onresize = onResize;
     };
   }
 
-  document.getElementsByClassName('image-container')[0].classList.toggle("fx-opacity");
 
 
 
@@ -117,11 +110,6 @@ window.onresize = onResize;
 
   colorText();
   randomPositionCarre();
-
-  setTimeout(() => {
-    let tt = document.querySelector("header").offsetHeight + "px";
-    document.documentElement.style.setProperty("--navHeight", tt);
-  }, "1000");
 
 
 });
