@@ -278,7 +278,6 @@ picture{
 .carre {
   width: 15vw;
   height: 15vw;
-  background-color: var(--bgc-color);
   position: relative;
 }
 

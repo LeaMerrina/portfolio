@@ -6,6 +6,8 @@ function randomPositionCarre() {
   gsap.to("#carre", 2, go);
 }
 
+let currentBlocOpenExplication = undefined;
+
 
 
 
@@ -27,6 +29,11 @@ document.addEventListener("DOMContentLoaded", function () {
   
   generateBullets();
 
+
+
+
+
+
 let windowsWidth = 0;
 let sliderIsDestroy = true;
 let slider = null;
@@ -43,6 +50,7 @@ const sliderSettings = {
       autoPlay:2000
     }
   }};
+
 
 function onResize() {
 
@@ -82,8 +90,17 @@ window.onresize = onResize;
   for (let i = 0; i < showMoreList.length; i++) {
     const element = showMoreList[i];
     element.onclick = function (e) {
-      e.currentTarget.parentNode.classList.toggle("openExplication");
+      if(currentBlocOpenExplication != undefined){
+        currentBlocOpenExplication.classList.toggle("openExplication")
+      };
+      if(currentBlocOpenExplication != e.currentTarget.parentNode){
+        currentBlocOpenExplication = e.currentTarget.parentNode;
+        currentBlocOpenExplication.classList.toggle("openExplication");
+      } else{
+        currentBlocOpenExplication = undefined;
+      }
     };
+    
   }
 
 
@@ -98,6 +115,9 @@ window.onresize = onResize;
     spacing: jsPadding,
   });
 
+
+
+
   const colorText = () => {
     var tl = gsap.timeline({ onComplete: colorText });
     for (var i = 0; i <= 5; i++) {
@@ -107,6 +127,9 @@ window.onresize = onResize;
 
     tl.resume();
   };
+
+
+
 
   colorText();
   randomPositionCarre();
